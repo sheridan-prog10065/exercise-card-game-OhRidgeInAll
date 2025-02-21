@@ -9,4 +9,17 @@ public class CardDeck
     /// The list of cards comprising the deck
     /// </summary>
     private List<Card> _cardList;
+
+    public CardDeck()
+    {
+        _cardList = new List<Card>();
+    }
+
+    public int CardCount
+    {
+        get
+        {
+            return _cardList.Count;
+        }
+    }
 }

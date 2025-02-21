@@ -7,6 +7,8 @@ namespace CardGameInteractive;
 /// </summary>
 public class CardGame
 {
+    #region Fields
+    
     /// <summary>
     /// Represents the deck of cards the dealer deals from
     /// </summary>
@@ -26,4 +28,129 @@ public class CardGame
     /// Card dealt to the dealer
     /// </summary>
     private Card _houseCard;
+    #endregion
+
+    #region Constructors
+    /// <summary>
+    /// Constructor of the Card Game Class
+    /// </summary>
+    public CardGame()
+    {
+        _cardDeck = new CardDeck();
+        _score = new Score();
+        _playerCard = null;
+        _houseCard = null;
+
+    }
+    
+    #endregion
+
+    #region Properties
+    /// <summary>
+    /// Plays the game
+    /// </summary>
+    public void Play()
+    {
+        //TODO: Implement Play()
+    }
+
+    /// <summary>
+    /// Plays a round of the game
+    /// </summary>
+    /// <returns>
+    ///     +1: the user won the round
+    ///     0: there was a tie
+    ///     -1: the house won the round
+    /// </returns>
+    private sbyte PlayRound()
+    {
+        //TODO: Implement PlayRound()
+        return 0;
+    }
+
+    public Score score
+    {
+        get { return _score; }
+        set { _score = value; }
+    }
+
+    public Card PlayerCard
+    {
+        get { return _playerCard; }
+    }
+
+    public Card HouseCard
+    {
+        get { return _houseCard; }
+    }
+
+    public bool IsOver
+    {
+        get { return _cardDeck.CardCount < 2; }
+    }
+    public bool playerWins
+    {
+        get
+        {
+            return this.IsOver && _score.PlayerScore > _score.HouseScore;
+        }
+    }
+
+    public bool houseWins
+    {
+        get
+        {
+            return this.IsOver && _score.PlayerScore < _score.HouseScore;
+        }
+    }
+    #endregion
+    
+    #region Methods
+
+    /// <summary>
+    /// Give a card to both the dealer and the player
+    /// </summary>
+    private void DealCards()
+    {
+        
+    }
+
+    /// <summary>
+    /// Swap cards with the dealer
+    /// </summary>
+    private void SwitchCards()
+    {
+        
+    }
+
+    /// <summary>
+    /// Evaluate who's card is highest
+    /// </summary>
+    private byte DetermineCardRank(Card card)
+    {
+        byte cardRank = (card.Value == 1) ? (byte)14 : card.Value;
+
+        return cardRank;
+        //Check if the rank is an ace
+        if (card.Value == 1)
+        {
+            return 14;
+        }
+        else
+        {
+            return card.Value;
+        }
+    }
+
+    private void ShowRoundResults()
+    {
+        //TODO: implement ShowRoundResults()
+    }
+
+    private void ShowGameOver()
+    {
+        //TODO: implement ShowGameOver()
+    }
+    
+    #endregion
 }
