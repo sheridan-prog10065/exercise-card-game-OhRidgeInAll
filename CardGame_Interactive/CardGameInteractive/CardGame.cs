@@ -64,8 +64,26 @@ public class CardGame
     /// </returns>
     private sbyte PlayRound()
     {
-        //TODO: Implement PlayRound()
-        return 0;
+        //Determine the card ranks for the player and house cards
+        byte houseRank = DetermineCardRank(_houseCard);
+        byte cardRank = DetermineCardRank(_playerCard);
+        
+        //check which card has the higher rank to determine the winner
+        if (cardRank > houseRank)
+        {
+            //winner genyo
+            return 1;
+        }
+        else if (cardRank < houseRank)
+        {
+            //House always wins baby
+            return -1;
+        }
+        else
+        {
+            //it's a tie
+            return 0;
+        }
     }
 
     public Score score
