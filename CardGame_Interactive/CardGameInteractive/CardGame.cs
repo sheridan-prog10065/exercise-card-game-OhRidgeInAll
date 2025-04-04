@@ -1,3 +1,7 @@
+using JetBrains.Annotations;
+using System.Diagnostics;
+using Debug = System.Diagnostics.Debug;
+
 namespace CardGameInteractive;
 
 /// <summary>
@@ -37,6 +41,7 @@ public class CardGame
     public CardGame()
     {
         _cardDeck = new CardDeck();
+        _cardDeck.ShuffleCards();
         _score = new Score();
         _playerCard = null;
         _houseCard = null;
@@ -62,7 +67,7 @@ public class CardGame
     ///     0: there was a tie
     ///     -1: the house won the round
     /// </returns>
-    private sbyte PlayRound()
+    public sbyte PlayRound()
     {
         //Determine the card ranks for the player and house cards
         byte houseRank = DetermineCardRank(_houseCard);
@@ -128,15 +133,16 @@ public class CardGame
     /// <summary>
     /// Give a card to both the dealer and the player
     /// </summary>
-    private void DealCards()
+    public void DealCards()
     {
-        
+        bool cardsDealt = _cardDeck.GetPairOfCards(out _playerCard, out _houseCard);
+        Debug.Assert(cardsDealt, "Cards could not be dealt. Check the game is not over");
     }
 
     /// <summary>
     /// Swap cards with the dealer
     /// </summary>
-    private void SwitchCards()
+    public void SwitchCards()
     {
         
     }

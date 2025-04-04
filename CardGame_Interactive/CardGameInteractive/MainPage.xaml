@@ -30,16 +30,19 @@
         <!-- Game Control Buttons -->
         <Button x:Name="_btnDealCards" Text="Deal"
                 Grid.Row="1" Grid.Column="0" 
+                Clicked="OnDealCards"
                 HorizontalOptions="Fill" Margin="0, 20" FontSize="36"/>
 
         <Button  x:Name="_btnSwitchCards" Text="Switch"   
                  Grid.Row="1" Grid.Column="1"
                  HorizontalOptions="Center" Margin="0, 20" FontSize="36"
                  WidthRequest="300" 
+                 Clicked="OnSwitchCards"
                  IsEnabled="False"/>
 
         <Button x:Name="_btnPlayCards" Text="Play" 
                 Grid.Row="1" Grid.Column="2" 
+                Clicked="OnPlayCards"
                 HorizontalOptions="Fill" Margin="0, 20" FontSize="36" 
                 IsEnabled="False"/>
 
