@@ -1,8 +1,7 @@
-using JetBrains.Annotations;
 using System.Diagnostics;
 using Debug = System.Diagnostics.Debug;
 
-namespace CardGameInteractive;
+namespace CardGameApp;
 
 /// <summary>
 /// I know a thing or two about cardgames myself.

@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace CardGameInteractive;
+namespace CardGameApp;
 
 /// <summary>
 /// Defines the Card used in the card game
