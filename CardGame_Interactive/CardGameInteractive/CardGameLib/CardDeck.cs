@@ -3,7 +3,7 @@ namespace CardGameLib;
 /// <summary>
 /// Defines the Deck containing the cards in CardGame
 /// </summary>
-public class CardDeck
+internal class CardDeck
 {
     /// <summary>
     /// The list of cards comprising the deck
