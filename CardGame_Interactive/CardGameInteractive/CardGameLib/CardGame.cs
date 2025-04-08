@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using Debug = System.Diagnostics.Debug;
 
-namespace CardGameApp;
+namespace CardGameLib;
 
 /// <summary>
 /// I know a thing or two about cardgames myself.

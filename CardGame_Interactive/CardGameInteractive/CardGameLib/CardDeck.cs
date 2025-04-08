@@ -1,4 +1,4 @@
-namespace CardGameApp;
+namespace CardGameLib;
 
 /// <summary>
 /// Defines the Deck containing the cards in CardGame

@@ -1,4 +1,4 @@
-namespace CardGameApp;
+namespace CardGameLib;
 
 /// <summary>
 /// Define the suit used on the cards: (Clubs, Spades, Hearts, Diamonds)

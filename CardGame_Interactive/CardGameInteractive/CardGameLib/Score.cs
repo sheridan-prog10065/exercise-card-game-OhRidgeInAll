@@ -1,4 +1,4 @@
-namespace CardGameApp;
+namespace CardGameLib;
 
 /// <summary>
 /// Define the score of the game
